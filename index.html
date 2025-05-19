@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meu Site Pessoal</title>
+  <title>Meu Site Pessoal - Início</title>
   <style>
     * {
       margin: 0;
@@ -13,7 +13,14 @@
       font-family: Arial, sans-serif;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background-color: #f5f5f5;
       color: #333;
     }
@@ -30,6 +37,7 @@
       display: flex;
       justify-content: center;
       gap: 40px;
+      flex-wrap: wrap;
     }
 
     nav a {
@@ -43,22 +51,54 @@
       color: #00bcd4;
     }
 
-    section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      gap: 3rem;
     }
 
-    h2 {
-      margin-bottom: 20px;
-      color: #00bcd4;
+    .foto-perfil {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333;
+    }
+
+    .texto {
+      max-width: 600px;
+    }
+
+    .texto p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
       background: #222;
       color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .texto {
+        max-width: 90%;
+      }
+
+      .foto-perfil {
+        width: 140px;
+        height: 140px;
+      }
     }
   </style>
 </head>
@@ -67,38 +107,21 @@
   <header>
     <nav>
       <a href="sobremim.html">Sobre Mim</a>
-      <a href="#formacao">Formação</a>
-      <a href="#portfolio">Portfólio</a>
-      <a href="#contato">Contato</a>
+      <a href="formacao.html">Formação</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
-  <section id="sobre">
-    <h2>Sobre Mim</h2>
-    <p>Olá! Meu nome é Alex Santos. por gostar mais de computador do que celular, revolvi entrar no mundo da programação.gosto de banco de dados e backend. escolhi java como minha linguagem do backend e atualmente estou aprendendo o framework java spring. Nos tempos livres, gosto de aprender idiomas, jogar videogame e escutar musica. Estou sempre em busca de aprender coisas novas e crescer como desenvolvedor.</p>
-  </section>
-
-  <section id="formacao">
-    <h2>Formação</h2>
-    <p>Sou formado em Análise e Desenvolvimento de Sistemas. Tenho conhecimentos em HTML, CSS, JavaScript, e frameworks como React. Falo português nativo e inglês intermediário.</p>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfólio</h2>
-    <ul>
-      <li><a href="https://github.com/seu-usuario/projeto1" target="_blank">Projeto 1 - Site responsivo</a></li>
-      <li><a href="https://github.com/seu-usuario/projeto2" target="_blank">Projeto 2 - Aplicativo de tarefas</a></li>
-    </ul>
-  </section>
-
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Email: joao@email.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/seu-usuario" target="_blank">linkedin.com/in/seu-usuario</a></p>
-  </section>
+  <main>
+    <img src="imgs/my.jpg" alt="Minha foto de perfil" class="foto-perfil">
+    <div class="texto">
+      <p>Meu nome é Alex Santos, sou estudante de engenharia de software.</p>
+    </div>
+  </main>
 
   <footer>
-    &copy; 2025 João Silva. Todos os direitos reservados.
+    © 2025 Alex Santos. Todos os direitos reservados.
   </footer>
 
 </body>

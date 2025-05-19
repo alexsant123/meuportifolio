@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Site - Formação Educacional</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      flex: 1;
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .secao {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .secao img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid #333;
+    }
+
+    .texto {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    h2 {
+      color: #00bcd4;
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .secao {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .texto {
+        margin-top: 1rem;
+      }
+
+      ul {
+        list-style-position: inside;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Meu Site</h1>
+    <nav>
+      <a href="index.html">Sobre Mim</a>
+      <a href="formacao.html">Formação Educacional</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- FORMAÇÃO -->
+    <div class="secao">
+      <img src="imgs/uni.png" alt="Formação">
+      <div class="texto">
+        <h2>Formação Superior</h2>
+        <p><strong>UNINTER</strong> – Início: 02/2024 • Previsão de Conclusão: 08/2028</p>
+      </div>
+    </div>
+
+    <!-- IDIOMAS -->
+    <div class="secao">
+      <img src="imgs/us.jpg" alt="Idiomas">
+      <div class="texto">
+        <h2>Idiomas</h2>
+        <ul>
+          <li>Inglês – Intermediário</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONHECIMENTOS -->
+    <div class="secao">
+      <img src="imgs/java.png" alt="Conhecimentos">
+      <div class="texto">
+        <h2>Conhecimentos Técnicos</h2>
+        <ul>
+          <li>JPA</li>
+          <li>Banco de Dados e SQL</li>
+          <li>HTML e CSS</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CURSOS -->
+    <div class="secao">
+      <img src="imgs/spring.png" alt="Cursos">
+      <div class="texto">
+        <h2>Cursos</h2>
+        <p>Atualmente aprendendo <strong>Java Spring Boot</strong>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Alex Santos. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
