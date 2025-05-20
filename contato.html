@@ -1,10 +1,141 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Site Pessoal -contato</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color:#98FB98		;
+      color: #333;
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      padding: 4rem 2rem;
+      flex-wrap: wrap;
+    }
+
+    .foto-perfil {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #333;
+    }
+
+    .texto {
+      max-width: 600px;
+    }
+
+    .texto h2 {
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    .texto p {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+
+      .texto {
+        max-width: 90%;
+      }
+
+      .foto-perfil {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Alex Santos</h1>
+    <nav>
+      <a href="index.html">Sobre Mim</a>
+      <a href="formacao.html">Formação Educacional</a>
+      <a href="portfolio.html">Portfólio</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+  </header>
+<main>
+  <div class="texto">
+    <h2>Contato</h2>
+    <p>Telefone: 19 981016750</p>
+    <p>Email: eua2016@hotmail.com</p>
+  </div>
+</main>
 
+
+  <footer>
+    © 2025 Alex Santos. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
